@@ -1,0 +1,15 @@
+<div class="flex mt-12 mx-16">
+    <div class="flex pl-96 h-[56.25rem] bg-slate-400">P1</div>
+    <div class="flex px-6">
+        <div class="grid-container">
+            <div class="grid-item" *ngFor="let product of products | async">
+              <div class="">
+               <img [src]="product.image" alt="{{ product.title }}" routerLink="/product/{{product.id}}">
+              </div>
+              <h3 routerLink="/product/{{product.id}}">{{ product.title }}</h3>
+              <p>{{ product.price | currency }}</p>
+              <p>{{ product.description}}</p>
+            </div>
+          </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust column width as needed */
+    grid-gap: 20px; /* Adjust gap between grid items as needed */
+  }
+  
+  .grid-item {
+    border: 1px solid #ccc; /* Add borders or customize styles as needed */
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .grid-item img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+  }
+  

@@ -1,0 +1,12 @@
+<div class="grid-item" *ngIf="product | async as product">
+    <div class="">
+        <img [src]="product.image" alt="{{ product.title }}" routerLink="/product/{{product.id}}">
+    </div>
+    <h3 routerLink="/product/{{product.id}}">{{ product.title }}</h3>
+    <p>{{ product.price | currency }}</p>
+    <p>{{ product.description}}</p>
+    <div class="flex-col">
+        <div><button type="button" (click)="addToCart()">Add To Cart</button></div>
+        <div><button type="button" (click)="buyNow()">Buy Now</button></div>
+    </div>
+</div>
